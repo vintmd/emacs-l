@@ -57,6 +57,7 @@
   (kbd "s")   #'counsel-projectile-find-matches
   (kbd "n")   #'projectile-add-known-project
   (kbd "C-p") #'projectile-switch-project
+  (kbd "u")    #'find-usage
   )
 
 (setq projectile-mode-line-prefix " P")
@@ -95,6 +96,11 @@
       (counsel-git-grep nil matchstr))
      (t (projectile-grep matchstr)))
     ))
+
+(defun find-usage ()
+  (interactive)
+  (counsel-projectile-find-matches (symbol-name (symbol-at-point)))
+  )
 
 (defun projectile-root-known-project (&optional dir)
   "find project-root from `projectile-known-projects'"
