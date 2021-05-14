@@ -55,12 +55,21 @@
      (font-lock-builtin-face                            (:foreground zy-bright_orange :bold t))
      (font-lock-constant-face                           (:foreground zy-bright_purple))
      (font-lock-comment-face                            (:foreground zy-dark4))
-     (font-lock-function-name-face                      (:foreground zy-bright_yellow :bold t))
-     (font-lock-keyword-face                            (:foreground zy-bright_red :bold t))
+     ;; this the function, change the zy-bright_yellow into the blue
+     ;; blow is the tmd's color config
+     (font-lock-function-name-face                      (:foreground zy-bright_blue :bold t))
+     (font-lock-keyword-face                            (:foreground zy-bright_purple))
      (font-lock-string-face                             (:foreground zy-bright_green))
-     (font-lock-variable-name-face                      (:foreground zy-bright_blue))
-     (font-lock-type-face                               (:foreground zy-bright_purple))
-     (font-lock-warning-face                            (:foreground zy-bright_red :bold t))
+     (font-lock-variable-name-face                      (:foreground zy-bright_red))
+     (font-lock-type-face                               (:foreground zy-bright_yellow :bold t))
+
+     ;; blow is the zy past color config
+     ;; (font-lock-function-name-face                      (:foreground zy-bright_yellow :bold t))
+     ;; (font-lock-keyword-face                            (:foreground zy-bright_red :bold t))
+     ;; (font-lock-string-face                             (:foreground zy-bright_green))
+     ;; (font-lock-variable-name-face                      (:foreground zy-bright_blue))
+     ;; (font-lock-type-face                               (:foreground zy-bright_purple))
+     ;; (font-lock-warning-face                            (:foreground zy-bright_red :bold t))
 
      ;; Basic faces
      (error                                             (:foreground zy-bright_red :bold t))
