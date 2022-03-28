@@ -1,5 +1,24 @@
 ;;; -*- coding: utf-8 -*-
 
+;;; below is used in windows
+;;; solve the no auth to .emace.d/server lock
+(defadvice server-ensure-safe-dir (around
+                                   my-around-server-ensure-safe-dir
+                                   activate)
+  "Ignores any errors raised from server-ensure-safe-dir"
+  (ignore-errors ad-do-it))
+
+(prefer-coding-system 'utf-8)
+
+;;; git bash as term
+(setq binary-process-input t)
+(setq w32-quote-process-args ?\")
+(setenv "SHELL" shell-file-name)
+(setq explicit-shell-file-name "C:/Program Files/Git/git-bash.exe")
+(setq explicit-sh-args '("-login" "-i"))
+
+;;; windows end
+
 ;;-------------------------------------------
 ;;; profile
 ;;-------------------------------------------
